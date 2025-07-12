@@ -1,43 +1,80 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manissh Kalasapakkam | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">Portfolio</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+  <header class="hero">
+    <img src="manissh.png" alt="Manissh" />
+    <h1>Manissh Kalasapakkam</h1>
+    <p>A Rising Star in ECE — Turning Circuits into Magic, and Code into Innovation</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </header>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m an Electronics and Communication Engineering student entering my second year,
+      with unmatched enthusiasm for building, learning, and leading in the tech space.
+      Known among peers for my quick grasp of embedded systems and my dedication to
+      hands-on learning, I’m already blazing trails most haven’t even mapped.
+    </p>
+  </section>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Embedded Systems & Arduino</li>
+      <li>Circuit Design & Simulation</li>
+      <li>Python for Automation</li>
+      <li>HTML, CSS & JavaScript</li>
+      <li>IoT Prototyping</li>
+    </ul>
+  </section>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Smart Dustbin with Ultrasonic Sensor</h3>
+      <p>Used an Arduino UNO and ultrasonic sensors to create an automatic dustbin that opens when someone approaches. Combines hardware control with clean UX.</p>
+      <img src="https://via.placeholder.com/600x300" alt="Smart Dustbin" />
+    </div>
+    <div class="project-card">
+      <h3>Gesture-Controlled LED System</h3>
+      <p>A prototype using IR sensors and Arduino Nano to turn on/off LEDs based on hand gestures. Great application in home automation.</p>
+      <img src="https://via.placeholder.com/600x300" alt="Gesture Project" />
+    </div>
+  </section>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="#" class="btn" download>Download My Resume (PDF)</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bluenightmare.m@gmail.com">bluenightmare.m@gmail.com</a></p>
+    <p>Phone: +91 7305195707</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/manissh</a></p>
+    <p>GitHub: <a href="#">github.com/manissh-dev</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Manissh Kalasapakkam. All rights reserved.</p>
+  </footer>
+</body>
+</html>
